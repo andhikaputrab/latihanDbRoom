@@ -9,6 +9,11 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+    Developed by Andhika Putra Bagaskara - 10117167 - IF5
+    on 25-04-2020
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     private AktivisEntity aktivisEntity;

@@ -7,6 +7,11 @@ import androidx.room.Query;
 
 import java.util.List;
 
+/*
+    Developed by Andhika Putra Bagaskara - 10117167 - IF5
+    on 25-04-2020
+ */
+
 @Dao
 public interface AktivisDao {
 

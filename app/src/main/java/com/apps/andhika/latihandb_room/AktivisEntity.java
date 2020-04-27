@@ -4,6 +4,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+/*
+    Developed by Andhika Putra Bagaskara - 10117167 - IF5
+    on 25-04-2020
+ */
+
 @Entity
 public class AktivisEntity {
 
