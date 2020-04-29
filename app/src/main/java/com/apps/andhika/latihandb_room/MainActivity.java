@@ -5,6 +5,7 @@ import androidx.room.Room;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AktivisEntity aktivisEntity;
     public static AppDatabase db;
+    private TextView textView1,textView2,textView3;
 
     //Attribut untuk mendisplay hasil data
     List<AktivisEntity> aktivisEntities = new ArrayList<>();
@@ -27,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textView1 = findViewById(R.id.txtView1);
+        textView2 = findViewById(R.id.txtView2);
+        textView3 = findViewById(R.id.txtView3);
 
         db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "Aktivis")
@@ -59,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
             Log.d("TAMPIL", "Zona : "+aktivisEntities.get(i).getZonaTugas());
             Log.d("TAMPIL", "===================");
         }
+        textView1.setText(aktivisEntity.getNamaAktivis());
+        textView2.setText(aktivisEntity.getEmailAktivis());
+        textView3.setText(aktivisEntity.getZonaTugas());
 
         //TAMPIL BERDASARKAN ZONA
         Log.e("ZONE", "Data Aktivis Berdasarkan Zona");
